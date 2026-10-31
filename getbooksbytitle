@@ -1,0 +1,12 @@
+Command:
+curl --silent --show-error "http://127.0.0.1:5000/title/Pride" --write-out '\nHTTP %{http_code}\n'
+
+Output:
+{
+  "8": {
+    "author": "Jane Austen",
+    "title": "Pride and Prejudice",
+    "reviews": {}
+  }
+}
+HTTP 200

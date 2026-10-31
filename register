@@ -1,0 +1,8 @@
+Command:
+curl --silent --show-error --request POST "http://127.0.0.1:5000/register" --header 'Content-Type: application/json' --data '{"username":"bookreader_demo","password":"DemoPassword123!"}' --write-out '\nHTTP %{http_code}\n'
+
+Output:
+{
+  "message": "User successfully registered. You can now log in."
+}
+HTTP 201

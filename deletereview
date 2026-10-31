@@ -1,0 +1,10 @@
+Command:
+curl --silent --show-error --request DELETE "http://127.0.0.1:5000/customer/auth/review/1" --cookie .evidence-cookies.txt --write-out '\nHTTP %{http_code}\n'
+
+Output:
+{
+  "message": "Review for ISBN 1 deleted successfully",
+  "isbn": "1",
+  "reviews": {}
+}
+HTTP 200

@@ -1,0 +1,25 @@
+Command:
+curl --silent --show-error --request PUT "http://127.0.0.1:5000/customer/auth/review/1" --cookie .evidence-cookies.txt --header 'Content-Type: application/json' --data '{"review":"An insightful novel with memorable characters."}' --write-out '\nHTTP %{http_code}\n'
+
+Output:
+{
+  "message": "Review added successfully",
+  "isbn": "1",
+  "reviews": {
+    "bookreader_demo": "An insightful novel with memorable characters."
+  }
+}
+HTTP 201
+
+Command:
+curl --silent --show-error --request PUT "http://127.0.0.1:5000/customer/auth/review/1" --cookie .evidence-cookies.txt --header 'Content-Type: application/json' --data '{"review":"A powerful story about tradition and change. Highly recommended."}' --write-out '\nHTTP %{http_code}\n'
+
+Output:
+{
+  "message": "Review updated successfully",
+  "isbn": "1",
+  "reviews": {
+    "bookreader_demo": "A powerful story about tradition and change. Highly recommended."
+  }
+}
+HTTP 200

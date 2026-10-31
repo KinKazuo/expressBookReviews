@@ -1,4 +1,12 @@
 # Distribution / packaging
 node_modules
 
+.env
+.env.*
+!.env.example
+.evidence-cookies.txt
+*.log
+.DS_Store
+coverage/
+
 
